@@ -1,11 +1,12 @@
 namespace FiguritasHub;
+
 using System.Linq;
 using System;
 using System.Collections.Generic;
 
 public class Album
 {
-    public string ?Nombre {get; set;}
+    public string? Nombre { get; set; }
     protected List<Figurita> Figuritas = new List<Figurita>();
 
     public void AgregarFigurita(Figurita figurita)
@@ -15,7 +16,7 @@ public class Album
 
     public void AgregarFigurita(Figurita figurita, int cantidad)
     {
-        if (cantidad  <= 0)
+        if (cantidad <= 0)
         {
             throw new ArgumentException("La cantidad no puede ser menor o igual a cero");
         }

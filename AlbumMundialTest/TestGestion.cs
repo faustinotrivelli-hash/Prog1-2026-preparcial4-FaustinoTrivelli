@@ -78,7 +78,7 @@ public class GestorDeCanjeTests
         GestorDeCanjeService gestor = new GestorDeCanjeService();
 
         Assert.That(() => gestor.Canjear(origen, destino, figurita), Throws.TypeOf<ArgumentException>());
-            
-            
+
+
     }
 }

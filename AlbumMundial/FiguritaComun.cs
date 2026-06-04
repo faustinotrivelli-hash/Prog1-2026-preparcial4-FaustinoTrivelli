@@ -1,9 +1,10 @@
 namespace FiguritasHub;
+
 using System;
 
 public class FiguritaComun : Figurita
 {
-    public int Rareza {get; set;}
+    public int Rareza { get; set; }
     public FiguritaComun(int numero, string nombre, string pais, int rareza) : base(numero, nombre, pais)
     {
         if (rareza < 1 || rareza > 5)

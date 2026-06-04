@@ -1,11 +1,12 @@
 ﻿namespace FiguritasHub;
+
 using System;
 
 public abstract class Figurita
 {
-    public int Numero {get; set;}
-    public string Nombre {get; set;}
-    public string Pais {get; set;}
+    public int Numero { get; set; }
+    public string Nombre { get; set; }
+    public string Pais { get; set; }
     public Figurita(int numero, string nombre, string pais)
     {
         if (string.IsNullOrWhiteSpace(nombre))
@@ -24,5 +25,5 @@ public abstract class Figurita
     }
 
     public abstract string ConsultarCategoria();
-    
+
 }

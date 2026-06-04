@@ -1,9 +1,10 @@
 namespace FiguritasHub;
+
 using System;
 
 public class FiguritaBrillante : Figurita
 {
-    public bool EsEdicionLimitada {get; set;}
+    public bool EsEdicionLimitada { get; set; }
     public FiguritaBrillante(int numero, string nombre, string pais, bool esEdicionLimitada) : base(numero, nombre, pais)
     {
         EsEdicionLimitada = esEdicionLimitada;
@@ -14,7 +15,8 @@ public class FiguritaBrillante : Figurita
         if (EsEdicionLimitada)
         {
             return $"Brillante (Edición Limitada)";
-        } else
+        }
+        else
         {
             return "Brillante";
         }

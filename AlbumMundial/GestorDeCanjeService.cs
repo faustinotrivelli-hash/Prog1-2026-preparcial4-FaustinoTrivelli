@@ -1,4 +1,5 @@
 namespace FiguritasHub;
+
 using System.Linq;
 
 public class GestorDeCanjeService
@@ -10,12 +11,13 @@ public class GestorDeCanjeService
         Albums.Add(album);
     }
 
-    public void Canjear(Album origen, Album destino,  int numeroDeFigurita)
+    public void Canjear(Album origen, Album destino, int numeroDeFigurita)
     {
         Figurita figurita =
             origen.BuscarPorNumero(numeroDeFigurita);
 
-        if (figurita == null){
+        if (figurita == null)
+        {
             throw new ArgumentException("La figurita no existe en el álbum origen");
         }
 
@@ -28,7 +30,7 @@ public class GestorDeCanjeService
         {
             throw new ArgumentException("El álbum origen no tiene la figurita como repetida");
         }
-        
+
         if (destino.PoseeFigurita(figurita.Numero))
         {
             throw new ArgumentException("El álbum destino ya posee esa figurita");
